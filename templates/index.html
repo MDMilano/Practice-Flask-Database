@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MySQL with Flask</title>
+</head>
+<body>
+    <h1>User List</h1>
+    <ul>
+        {% for user in users %}
+            <li>{{ user[0] }} - {{ user[1] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('add_user') }}">Add New User</a>
+</body>
+</html>
